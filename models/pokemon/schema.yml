@@ -1,0 +1,24 @@
+
+version: 2
+
+models:
+    - name: stg_pokemons
+    - name: pokemons_in_games
+      description: View with a row per pokemon per game it is featured in
+      columns:
+        - name: id
+        - name: name
+        - name: game_name
+    - name: pokemon_types
+      description: View with every pokemons primary and secondary type (if applicable)
+      columns:
+        - name: id
+          tests:
+            - unique
+        - name: primary_type_name
+        - name: secondary_type_name
+    - name: fkt_pokemons
+      columns:
+        - name: id
+          tests:
+            - unique
