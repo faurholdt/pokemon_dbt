@@ -23,3 +23,4 @@ cast(base.sprites.front_default as varchar) as front_default_sprite
 from {{ ref("stg_pokemons") }} base
 join games on games.id = base.id
 join types on types.id = base.id
+order by base.id asc
